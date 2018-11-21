@@ -41,12 +41,6 @@ SECURE_HSTS_PRELOAD = env.bool('DJANGO_SECURE_HSTS_PRELOAD', default=True)
 SECURE_CONTENT_TYPE_NOSNIFF = env.bool('DJANGO_SECURE_CONTENT_TYPE_NOSNIFF', default=True)
 
 # STATIC
-# ------------------------
-
-# MEDIA
-# ------------------------------------------------------------------------------
-
-
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
@@ -84,8 +78,8 @@ INSTALLED_APPS += ['anymail']  # noqa F405
 EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
 # https://anymail.readthedocs.io/en/stable/installation/#anymail-settings-reference
 ANYMAIL = {
-    'MAILGUN_API_KEY': env('MAILGUN_API_KEY'),
-    'MAILGUN_SENDER_DOMAIN': env('MAILGUN_DOMAIN')
+    'MAILGUN_API_KEY': env('MAILGUN_API_KEY', 'dfjglfsk'),
+    'MAILGUN_SENDER_DOMAIN': env('MAILGUN_DOMAIN', 'dsgkldfgj')
 }
 
 # Gunicorn
